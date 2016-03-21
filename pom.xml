@@ -22,7 +22,7 @@
 
 
         <!-- Java EE / Java SE dependencies -->
-        <tomcat.version>7.0.59</tomcat.version>
+        <!-- tomcat.version>7.0.59</tomcat.version -->
 
         <!-- Test -->
         <assertj.version>2.2.0</assertj.version>
@@ -133,11 +133,6 @@
         See here for more details on commons-dbcp versus tomcat-jdbc:
         http://blog.ippon.fr/2013/03/13/improving-the-performance-of-the-spring-petclinic-sample-application-part-3-of-5/
     -->
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-jdbc</artifactId>
-            <scope>runtime</scope>
-        </dependency>
 
         <!-- Logging with SLF4J & LogBack -->
         <dependency>
@@ -336,16 +331,6 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.2</version>
-                <configuration>
-                    <server>tomcat-development-server</server>
-                    <port>9966</port>
-                    <path>/petclinic</path>
                 </configuration>
             </plugin>
             <plugin>
